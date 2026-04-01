@@ -1,17 +1,16 @@
 *PPD-Adobe: "4.3"
-*%%%% PPD file for Ricoh Aficio SP 111 with CUPS.
-*%%%% Created by Joel G Mathew for SP 111, based on Shistarev's PPD for SP 111
-*%%%% Created by Serge V Shistarev from PPD built for Ricoh Aficio SP 111
+*%%%% PPD file for Ricoh Aficio SP 100 with CUPS.
+*%%%% Created by Serge V Shistarev from PPD built for Ricoh Aficio SP 100
 *FormatVersion: "4.3"
 *FileVersion: "1.0"
 *LanguageVersion: English
 *LanguageEncoding: ISOLatin1
-*PCFileName: "rsp111.ppd"
-*Product: "(Ricoh Aficio SP 111)"
+*PCFileName: "rsp100.ppd"
+*Product: "(Ricoh Aficio SP 100)"
 *Manufacturer: "Ricoh"
-*ModelName: "Ricoh Aficio SP 111"
-*ShortNickName: "Ricoh Aficio SP 111"
-*NickName: "Ricoh Aficio SP 111, pstoricohddst-gdi 0.5 alpha"
+*ModelName: "Ricoh Aficio SP 100"
+*ShortNickName: "Ricoh Aficio SP 100"
+*NickName: "Ricoh Aficio SP 100, pstoricohddst-gdi 0.5 alpha"
 *PSVersion: "(3010.000) 0"
 *LanguageLevel: "3"
 *ColorDevice: False

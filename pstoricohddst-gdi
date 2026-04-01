@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Debug mode: change to 'yes' to enable
-DEBUG=no
+# Debug mode: enabled to simplify troubleshooting on newer CUPS/Ghostscript stacks
+DEBUG=yes
 
 function log() {
     [ "${DEBUG}" = "yes" ] && echo $* | logger -t "$0[$$]"
@@ -10,6 +10,9 @@ function log() {
 function logpipe() {
     [ "${DEBUG}" = "yes" ] && echo $* | logger -t "$0[$$]"
 }
+
+GS_QUIET="-dQUIET"
+[ "${DEBUG}" = "yes" ] && GS_QUIET=""
 
 function trapINT() {
     log "trapINT()"
@@ -60,11 +63,15 @@ e=$(echo -en "\r")
 ddate="`LC_ALL=en_US.UTF-8 date '+%Y/%m/%d %H:%M:%S'`"
 
 # Temporary directory
-uid="/tmp/pstoricohddst-gdi-`uuidgen`"
-mkdir -p $uid
-[ "${DEBUG}" = "yes" ] && exec >$uid/output.stream #> >(tee $uid/output.stream)
+# Newer CUPS/Astra setups can restrict filter writes to /tmp, so keep scratch
+# files under the CUPS spool tmp directory when it exists.
+spooltmp="/var/spool/cups/tmp"
+[ -d "$spooltmp" ] || spooltmp="/tmp"
+uid="${spooltmp}/pstoricohddst-gdi-`uuidgen`"
+mkdir -p "$uid" || exit 1
+[ "${DEBUG}" = "yes" ] && exec 2>"$uid/output.stream"
 
-[ -x "$(which inotifywait)" ] && {
+if false; then
 	log "Asynchronous variant"
 
 	(
@@ -139,13 +146,20 @@ EOF
 	wait
 
 	trapINT
-} || {
+else
 	log "Synchronous variant"
 
-	# Converting from PostScript to PostScript-monochrome, then to PBM image format (per page)
+	# Convert directly to PBM pages. The older ps2write->pbmraw pipeline is fragile
+	# on newer Ghostscript versions and may leave us with no page files at all.
 	log "Converting document to pages"
-	gs -sDEVICE=ps2write -sOutputFile=- -r$resolution -dQUIET -dBATCH -dNOPAUSE - | gs -sDEVICE=pbmraw -sOutputFile=${uid}/%03d-page.pbm -r$resolution -dQUIET -dBATCH -dNOPAUSE -
+	gs -sDEVICE=pbmraw -sOutputFile=${uid}/%03d-page.pbm -r$resolution ${GS_QUIET} -dBATCH -dNOPAUSE -
 	log "Conversion complete"
+	ls -la "${uid}" | logger -t "$0[$$]"
+
+	compgen -G "${uid}/*-page.pbm" > /dev/null || {
+		log "No PBM pages were produced"
+		exit 1
+	}
 
 	cat <<EOF
 %-12345X@PJL$e
@@ -200,7 +214,7 @@ EOF
 %-12345X
 EOF
 
-}
+fi
 
 #rm -rf $uid;
 
