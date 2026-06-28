@@ -13,12 +13,12 @@
 
 
 <!-- STATS_START -->
-<!-- auto-updated by GitHub Actions · 2026-06-28 04:23 UTC -->
+<!-- auto-updated by GitHub Actions · 2026-06-28 13:58 UTC -->
 
-[![Views local](https://img.shields.io/badge/Views_local-0-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
-[![Views GitHub](https://img.shields.io/badge/Views_GitHub-0-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
-[![Unique visitors](https://img.shields.io/badge/Unique-0-blue?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
-[![Clones](https://img.shields.io/badge/Clones-0-purple?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
+[![Views local](https://img.shields.io/badge/Views_local-1-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
+[![Views GitHub](https://img.shields.io/badge/Views_GitHub-3-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
+[![Unique visitors](https://img.shields.io/badge/Unique-1-blue?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
+[![Clones](https://img.shields.io/badge/Clones-53-purple?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
 [![Stars](https://img.shields.io/badge/Stars-0-yellow?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8/stargazers)
 [![Forks](https://img.shields.io/badge/Forks-0-green?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8/network/members)
 [![Downloads latest release](https://img.shields.io/badge/Downloads_latest_release-0-brightgreen?style=for-the-badge)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8/releases/latest)
@@ -50,7 +50,7 @@
 
 
 <!-- ISSUES_START -->
-<!-- auto-updated by GitHub Actions · 2026-06-28 04:23 UTC -->
+<!-- auto-updated by GitHub Actions · 2026-06-28 13:58 UTC -->
 
 ## Issues
 
@@ -58,7 +58,9 @@
   <a href="https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8/issues">
     <img alt="Open issues" src="https://img.shields.io/badge/Open_issues-0-blue?style=for-the-badge&logo=github">
   </a>
-  <img alt="Issues disabled" src="https://img.shields.io/badge/Create_issue-disabled-lightgrey?style=for-the-badge&logo=github">
+  <a href="https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8/issues/new/choose">
+    <img alt="Create issue" src="https://img.shields.io/badge/Create_issue-new-success?style=for-the-badge&logo=github">
+  </a>
 </p>
 
 <details open>
@@ -66,13 +68,15 @@
 
 
 <p align="center">
-  <b>Issues отключены в настройках репозитория.</b>
+  <b>Открытых issues нет.</b><br>
+  <sub>Служебный issue <code>views-counter</code> скрыт из списка.</sub>
 </p>
 
 
 </details>
 
 <p>
+  <a href="https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8/issues/new/choose">Создать issue</a> ·
   <a href="https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8/issues">Все issues</a>
 </p>
 
