@@ -1,4 +1,82 @@
-# Драйвер и CUPS-фильтр для Ricoh Aficio SP-111
+<div align="center">
+
+<img src="resources/header.svg" alt="Ricoh Aficio SP-111 Driver" width="900"/>
+
+</div>
+
+
+
+
+
+<!-- STATS_START -->
+<!-- auto-updated locally · 2026-06-26 17:57 UTC -->
+
+[![Views local](https://img.shields.io/badge/Views_local-3-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
+[![Views GitHub](https://img.shields.io/badge/Views_GitHub-3-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
+[![Unique visitors](https://img.shields.io/badge/Unique-1-blue?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
+[![Clones](https://img.shields.io/badge/Clones-26-purple?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
+[![Stars](https://img.shields.io/badge/Stars-0-yellow?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8/stargazers)
+[![Forks](https://img.shields.io/badge/Forks-0-green?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8/network/members)
+[![Downloads latest release](https://img.shields.io/badge/Downloads_latest_release-0-brightgreen?style=for-the-badge)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8/releases/latest)
+[![Downloads total assets](https://img.shields.io/badge/Downloads_total_assets-0-brightgreen?style=for-the-badge)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8/releases)
+
+<!-- STATS_END -->
+
+
+
+
+
+
+
+
+
+<!-- GRAPH_START -->
+<p align="center">
+  <img src="./traffic-views.png" width="100%" alt="GitHub Traffic">
+</p>
+<!-- GRAPH_END -->
+
+
+
+
+
+
+
+
+
+
+<!-- ISSUES_START -->
+<!-- auto-updated locally · 2026-06-26 17:57 UTC -->
+
+## Issues
+
+<p>
+  <a href="https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8/issues">
+    <img alt="Open issues" src="https://img.shields.io/badge/Open_issues-0-blue?style=for-the-badge&logo=github">
+  </a>
+  <img alt="Issues disabled" src="https://img.shields.io/badge/Create_issue-disabled-lightgrey?style=for-the-badge&logo=github">
+</p>
+
+<details open>
+<summary><b>Открытые issues</b></summary>
+
+
+<p align="center">
+  <b>Issues отключены в настройках репозитория.</b>
+</p>
+
+</details>
+
+<p>
+  <a href="https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8/issues">Все issues</a>
+</p>
+
+<!-- ISSUES_END -->
+
+
+
+
+## Драйвер Ricoh Aficio SP-111
 
 Это форк старого драйвера `pstoricohddst-gdi` для принтеров серии `Ricoh SP 100/111/204 DDST`.
 
