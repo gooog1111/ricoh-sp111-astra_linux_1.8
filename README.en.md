@@ -13,9 +13,9 @@
 
 
 <!-- STATS_START -->
-<!-- auto-updated by GitHub Actions · 2026-07-10 03:03 UTC -->
+<!-- auto-updated by GitHub Actions · 2026-07-10 04:01 UTC -->
 
-[![Views local](https://img.shields.io/badge/Views_local-275-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
+[![Views local](https://img.shields.io/badge/Views_local-276-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
 [![Views GitHub](https://img.shields.io/badge/Views_GitHub-4-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
 [![Unique visitors](https://img.shields.io/badge/Unique-2-blue?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
 [![Clones](https://img.shields.io/badge/Clones-1471-purple?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
@@ -50,7 +50,7 @@
 
 
 <!-- ISSUES_START -->
-<!-- auto-updated by GitHub Actions · 2026-07-10 03:03 UTC -->
+<!-- auto-updated by GitHub Actions · 2026-07-10 04:01 UTC -->
 
 ## Issues
 
@@ -85,73 +85,73 @@
 
 
 
-## Драйвер Ricoh Aficio SP-111
+## Driver Ricoh Aficio SP-111
 
-Это форк старого драйвера `pstoricohddst-gdi` для принтеров серии `Ricoh SP 100/111/204 DDST`.
+This is a fork of the old `pstoricohddst-gdi` driver for `Ricoh SP 100/111/204 DDST` series printers.
 
-В этом форке:
+In this fork:
 
-- исправлена работа фильтра на современных `CUPS` и `Ghostscript`;
-- отключен нестабильный асинхронный режим через `inotifywait`;
-- временные файлы создаются в `/var/spool/cups/tmp`, что лучше работает в `Astra Linux`;
-- включено более удобное отладочное логирование;
-- добавлен `install.sh` для установки из текущей папки проекта.
+- fixed filter operation on modern `CUPS` and `Ghostscript`;
+- unstable asynchronous mode is disabled via `inotifywait`;
+- temporary files are created in `/var/spool/cups/tmp`, which works better in `Astra Linux`;
+- more convenient debug logging enabled;
+- added `install.sh` for installation from the current project folder.
 
-## Состав
+## Composition
 
-- `pstoricohddst-gdi` — фильтр CUPS;
-- `RICOH_Aficio_SP_100.ppd` — PPD для SP 100;
-- `RICOH_Aficio_SP_111.ppd` — PPD для SP 111;
-- `RICOH_Aficio_SP_204.ppd` — PPD для SP 204;
-- `check-requirements` — проверка зависимостей;
-- `install.sh` — установка фильтра и PPD из относительного пути.
+- `pstoricohddst-gdi` — CUPS filter;
+- `RICOH_Aficio_SP_100.ppd` — PPD for SP 100;
+- `RICOH_Aficio_SP_111.ppd` — PPD for SP 111;
+- `RICOH_Aficio_SP_204.ppd` — PPD for SP 204;
+- `check-requirements` — dependency checking;
+- `install.sh` — setting the filter and PPD from a relative path.
 
-## Зависимости
+## Dependencies
 
-Проверьте наличие зависимостей:
+Check for dependencies:
 
 ```bash
 ./check-requirements
 ```
 
-Если чего-то не хватает, установите пакеты:
+If something is missing, install the packages:
 
 ```bash
 sudo apt update
 sudo apt install cups ghostscript imagemagick jbigkit-bin inotify-tools
 ```
 
-## Установка
+## Installation
 
-Самый простой способ — запустить установочный скрипт из корня проекта:
+The easiest way is to run the installation script from the root of the project:
 
 ```bash
 chmod +x install.sh
 sudo ./install.sh
 ```
 
-Скрипт:
+Script:
 
-- копирует `pstoricohddst-gdi` в `/usr/lib/cups/filter/`;
-- выставляет права `root:root` и `755`;
-- копирует `PPD` в `/usr/share/ppd/ricoh-sp111/`;
-- перезапускает `cups`.
+- copies `pstoricohddst-gdi` to `/usr/lib/cups/filter/`;
+- sets the rights `root:root` and `755`;
+- copies `PPD` to `/usr/share/ppd/ricoh-sp111/`;
+- restarts `cups`.
 
-После этого добавьте принтер через веб-интерфейс CUPS:
+After that, add the printer through the CUPS web interface:
 
 ```text
 http://localhost:631/
 ```
 
-При выборе драйвера укажите подходящий `PPD`:
+When selecting a driver, specify the appropriate `PPD`:
 
-- `RICOH_Aficio_SP_111.ppd` для `SP 111`;
-- `RICOH_Aficio_SP_100.ppd` для `SP 100`;
-- `RICOH_Aficio_SP_204.ppd` для `SP 204`.
+- `RICOH_Aficio_SP_111.ppd` for `SP 111`;
+- `RICOH_Aficio_SP_100.ppd` for `SP 100`;
+- `RICOH_Aficio_SP_204.ppd` for `SP 204`.
 
-## Ручная установка
+## Manual installation
 
-Если не хотите использовать `install.sh`, можно установить вручную:
+If you don't want to use `install.sh`, you can set it manually:
 
 ```bash
 sudo cp pstoricohddst-gdi /usr/lib/cups/filter/
@@ -164,46 +164,46 @@ sudo cp RICOH_Aficio_SP_*.ppd /usr/share/ppd/ricoh-sp111/
 sudo systemctl restart cups
 ```
 
-## Диагностика
+## Diagnostics
 
-Проверить, видит ли CUPS принтер:
+Check if CUPS sees the printer:
 
 ```bash
 lpstat -t
 ```
 
-Посмотреть, установлен ли фильтр:
+See if the filter is installed:
 
 ```bash
 ls -l /usr/lib/cups/filter/pstoricohddst-gdi
 ```
 
-Проверить зависимости:
+Check dependencies:
 
 ```bash
 which gs identify pbmtojbg inotifywait
 ```
 
-Включить подробный лог CUPS:
+Enable verbose CUPS logging:
 
 ```bash
 sudo cupsctl --debug-logging
 sudo systemctl restart cups
 ```
 
-Отправить тестовую страницу:
+Submit test page:
 
 ```bash
 lp -d ИМЯ_ПРИНТЕРА /usr/share/cups/data/testprint
 ```
 
-Посмотреть ошибки фильтра:
+View filter errors:
 
 ```bash
 sudo grep -i "pstoricohddst-gdi\|ghostscript\|error\|unable" /var/log/cups/error_log | tail -n 50
 ```
 
-## Примечания
+## Notes
 
-- Проект основан на старом неофициальном драйвере и не поддерживается производителем.
-- Для `Astra Linux 1.8` этот форк проверен на рабочую печать с `Ricoh SP 111SU DDST`.
+- The project is based on an old unofficial driver and is not supported by the manufacturer.
+- For `Astra Linux 1.8` this fork has been tested to work with `Ricoh SP 111SU DDST`.
