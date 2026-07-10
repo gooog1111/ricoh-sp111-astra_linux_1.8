@@ -13,9 +13,9 @@
 
 
 <!-- STATS_START -->
-<!-- auto-updated by GitHub Actions · 2026-07-10 15:01 UTC -->
+<!-- auto-updated by GitHub Actions · 2026-07-10 15:47 UTC -->
 
-[![Views local](https://img.shields.io/badge/Views_local-287-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
+[![Views local](https://img.shields.io/badge/Views_local-288-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
 [![Views GitHub](https://img.shields.io/badge/Views_GitHub-4-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
 [![Unique visitors](https://img.shields.io/badge/Unique-2-blue?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
 [![Clones](https://img.shields.io/badge/Clones-1572-purple?style=for-the-badge&logo=github)](https://github.com/gooog1111/ricoh-sp111-astra_linux_1.8)
@@ -50,7 +50,7 @@
 
 
 <!-- ISSUES_START -->
-<!-- auto-updated by GitHub Actions · 2026-07-10 15:01 UTC -->
+<!-- auto-updated by GitHub Actions · 2026-07-10 15:47 UTC -->
 
 ## Issues
 
@@ -132,8 +132,7 @@ sudo ./install.sh
 
 Script:
 
-- copies `pstoricohddst-gdi` to `/usr/lib/cups/filter/`;
-- sets the rights `root:root` and `755`;
+- copies `pstoricohddst-gdi` to `/usr/lib/cups/filter/`;- sets the rights `root:root` and `755`;
 - copies `PPD` to `/usr/share/ppd/ricoh-sp111/`;
 - restarts `cups`.
 
